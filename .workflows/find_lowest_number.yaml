@@ -5,24 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     name: Test find_lowest_number
     steps:
-    - name: Checkout
     - uses: actions/checkout@v4
-    - name: Set up Python
+    - name: Set up Python 3.10
     - uses: actions/setup-python@v3
     - with:
         python-version: '3.10'
 
-    - name: Ten Numbers
+    - name: Ten Numbers Test
     - run: python find_lowest_number.py > test1_input.txt 
     - name: Compare outputs 1
     - run: diff test1_input.txt test1_expected.txt
 
-    - name: One number
+    - name: One number Test
     - run: python find_lowest_number.py > test2_input.txt 
     - name: Compare outputs 1
     - run: diff test2_input.txt test2_expected.txt
 
-    - name: No numbers
+    - name: No numbers Test
     - run: python find_lowest_number.py > test3_input.txt 
     - name: Compare outputs 1
     - run: diff test3_input.txt test3_expected.txt
