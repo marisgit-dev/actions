@@ -12,17 +12,17 @@ jobs:
         python-version: '3.10'
 
     - name: Ten Numbers Test
-      run: python3 find_lowest_number.py test_cases/test1_input.txt test1_output.txt
+      run: python3 find_lowest_number.py test_data/test1_input.txt test1_output.txt
     - name: Compare output 1
       run: diff test1_output.txt test1_expected.txt
 
     - name: One number Test
-      run: python3 find_lowest_number.py test_cases/test2_input.txt test2_output.txt
+      run: python3 find_lowest_number.py test_data/test2_input.txt test2_output.txt
     - name: Compare output 2
       run: diff test2_output.txt test2_expected.txt
 
     - name: No numbers Test
-      run: python3 find_lowest_number.py test_cases/test3_input.txt test3_output.txt 
+      run: python3 find_lowest_number.py test_data/test3_input.txt test3_output.txt 
     - name: Compare output 3
       run: diff test3_output.txt test3_expected.txt
     
